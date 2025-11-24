@@ -11,9 +11,9 @@ export default function ServicesSection({ servicesRef, isServicesVisible }: Serv
   const { services } = portfolioContent;
 
   return (
-    <section id="services" ref={servicesRef} className="py-36 px-6 bg-black/50 dark:bg-black/50 backdrop-blur-sm relative">
+    <section id="services" ref={servicesRef} className="py-16 sm:py-24 md:py-32 lg:py-36 px-4 sm:px-6 bg-black/50 dark:bg-black/50 backdrop-blur-sm relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-24">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <SectionHeading isVisible={isServicesVisible}>{services.title}</SectionHeading>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto"></div>
         </div>

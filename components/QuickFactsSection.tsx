@@ -11,9 +11,9 @@ export default function QuickFactsSection({ quickFactsRef, isQuickFactsVisible }
   const { quickFacts } = portfolioContent;
 
   return (
-    <section ref={quickFactsRef} className="py-24 px-6 bg-black/40 dark:bg-black/40 backdrop-blur-sm relative">
+    <section ref={quickFactsRef} className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 bg-black/40 dark:bg-black/40 backdrop-blur-sm relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <SectionHeading isVisible={isQuickFactsVisible} size="h3">{quickFacts.title}</SectionHeading>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto"></div>
         </div>

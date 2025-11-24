@@ -11,13 +11,13 @@ export default function AboutSection({ aboutRef, isAboutVisible }: AboutSectionP
   const { about } = portfolioContent;
 
   return (
-    <section id="about" ref={aboutRef} className="py-36 px-6 bg-black/50 dark:bg-black/50 backdrop-blur-sm relative">
+    <section id="about" ref={aboutRef} className="py-16 sm:py-24 md:py-32 lg:py-36 px-4 sm:px-6 bg-black/50 dark:bg-black/50 backdrop-blur-sm relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-24">
-          <SectionHeading isVisible={isAboutVisible}>{about.title}</SectionHeading>
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <SectionHeading isVisible={false}>{about.title}</SectionHeading>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto"></div>
         </div>
-        <p className="text-xl md:text-2xl text-slate-300 leading-relaxed mb-24 text-center max-w-4xl mx-auto">
+        <p className="text-xl md:text-2xl text-slate-300 leading-relaxed mb-12 sm:mb-16 md:mb-20 lg:mb-24 text-center max-w-4xl mx-auto">
           {about.description}
         </p>
         

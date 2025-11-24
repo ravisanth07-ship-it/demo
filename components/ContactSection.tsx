@@ -40,9 +40,9 @@ export default function ContactSection({
   const isFormValid = isValid();
 
   return (
-    <section id="contact" ref={contactRef} className="py-36 px-6 bg-black/40 dark:bg-black/40 backdrop-blur-sm relative">
+    <section id="contact" ref={contactRef} className="py-16 sm:py-24 md:py-32 lg:py-36 px-4 sm:px-6 bg-black/40 dark:bg-black/40 backdrop-blur-sm relative">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-24">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <SectionHeading isVisible={isContactVisible}>{contact.title}</SectionHeading>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-8"></div>
           <p className="text-xl text-slate-300">

@@ -18,6 +18,16 @@ export const metadata: Metadata = {
     template: "%s | Ravisanth R Pillai",
   },
   description: "Country Head at Indus Crusher. 15+ years in mining, crushing and aggregates. Worked across 40+ countries. Writer, documentary creator, and storyteller about Kerala's medieval history.",
+  icons: {
+    icon: [
+      { url: "/assets/profile.png", sizes: "any" },
+      { url: "/assets/profile.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/assets/profile.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/assets/profile.png",
+  },
   keywords: [
     "Ravisanth R Pillai",
     "Indus Crusher",
@@ -102,6 +112,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/assets/profile.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/profile.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

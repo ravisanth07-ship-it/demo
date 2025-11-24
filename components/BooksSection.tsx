@@ -12,14 +12,14 @@ export default function BooksSection({ booksRef, isBooksVisible }: BooksSectionP
   const { books } = portfolioContent;
 
   return (
-    <section id="books" ref={booksRef} className="py-36 px-6 bg-black/50 dark:bg-black/50 backdrop-blur-sm relative">
+    <section id="books" ref={booksRef} className="py-16 sm:py-24 md:py-32 lg:py-36 px-4 sm:px-6 bg-black/50 dark:bg-black/50 backdrop-blur-sm relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-24">
-          <SectionHeading isVisible={isBooksVisible}>{books.title}</SectionHeading>
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <SectionHeading isVisible={false}>{books.title}</SectionHeading>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto"></div>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-12 md:space-y-16">
           {/* GET A LIFE Book */}
           <div className={`max-w-4xl mx-auto ${isBooksVisible ? 'animate-list-item' : 'opacity-0'}`} style={{ animationDelay: isBooksVisible ? '0.1s' : '0s' }}>
             <div className="p-10 bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-slate-700/60 rounded-3xl hover:border-amber-600/60 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-600/20 min-h-[500px]">

@@ -31,40 +31,46 @@ export default function HeroSection({ heroRef, isHeroVisible }: HeroSectionProps
   };
 
   return (
-    <section ref={heroRef} className="pt-44 pb-36 px-6 relative">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-24 items-start">
-          <div className="space-y-12">
-            <div className={`inline-block px-6 py-3 bg-gradient-to-r from-amber-600/25 to-amber-600/15 border border-amber-600/40 rounded-full text-sm font-bold text-amber-400 tracking-wider backdrop-blur-sm shadow-lg shadow-amber-600/10 transition-all duration-700 ${
+    <section ref={heroRef} className="pt-24 sm:pt-32 md:pt-40 lg:pt-44 pb-12 sm:pb-20 md:pb-28 lg:pb-36 px-4 sm:px-6 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-start">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-12">
+            <div className={`inline-block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-amber-400 tracking-wide transition-all duration-700 px-2 sm:px-0 ${
               isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
             }`}>
-              {hero.badge}
+              <div className="flex flex-col gap-1">
+                {hero.badge.split('|').map((part, index) => (
+                  <span key={index} className="break-words">
+                    {part.trim()}
+                  </span>
+                ))}
+              </div>
             </div>
-            <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight transition-all duration-1000 ${
+            <h1 className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] tracking-tight transition-all duration-1000 px-2 sm:px-0 ${
               isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`} style={{ transitionDelay: isHeroVisible ? '0.2s' : '0s' }}>
               <span className={`inline-block relative ${isHeroVisible ? 'animate-list-item' : 'opacity-0'}`} style={{ animationDelay: isHeroVisible ? '0.3s' : '0s' }}>
-                <span className="inline-block mb-2 whitespace-nowrap">
-                  <span className={`text-amber-500 font-extrabold text-7xl md:text-8xl lg:text-9xl tracking-tighter ${
+                <span className="inline-block mb-2 break-words">
+                  <span className={`text-amber-500 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tighter ${
                     isHeroVisible ? 'animate-number-slide animate-number-glow' : 'opacity-0'
                   }`} style={{ animationDelay: isHeroVisible ? '0.4s' : '0s' }}>50–1000</span>
-                  <span className={`text-white font-bold text-5xl md:text-6xl lg:text-7xl ml-3 ${
+                  <span className={`text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl ml-2 sm:ml-3 ${
                     isHeroVisible ? 'animate-number-slide' : 'opacity-0'
                   }`} style={{ animationDelay: isHeroVisible ? '0.6s' : '0s' }}>TPH</span>
                 </span>
                 <br />
-                <span className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold block mt-2">
+                <span className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold block mt-2 break-words">
                   Plant Specialist
                 </span>
-                <span className="text-slate-400 text-3xl md:text-4xl lg:text-5xl font-medium block mt-3">
+                <span className="text-slate-400 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium block mt-3 break-words">
                   Global Project Execution
                 </span>
-                <span className="text-amber-400 text-3xl md:text-4xl lg:text-5xl font-semibold block mt-2">
+                <span className="text-amber-400 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold block mt-2 break-words">
                    40+ Countries
                 </span>
               </span>
             </h1>
-            <div className={`text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl text-justify ${
+            <div className={`text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl text-justify px-2 sm:px-0 ${
               isHeroVisible ? '' : 'opacity-0'
             }`}>
               {descriptionLines.map((line, lineIndex) => {

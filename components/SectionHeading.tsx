@@ -14,7 +14,7 @@ export default function SectionHeading({
   size = 'h2',
 }: SectionHeadingProps) {
   const baseClasses = `font-bold text-white mb-6 tracking-tight ${
-    isVisible ? 'animate-slide-down' : 'opacity-0'
+    isVisible ? 'opacity-100 md:animate-slide-down' : 'opacity-100'
   } ${className}`;
 
   const sizeClasses = size === 'h2' ? 'text-6xl' : 'text-5xl';
